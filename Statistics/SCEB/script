@@ -1,0 +1,9 @@
+python fasta2gff_windows.py --genome /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_SCEB13/0.Repeat/SCEB.fa.preSatMar211447412020.RMoutput/SCEB.fa.masked --size 500 > 500kb.gff
+
+#sed -i -e '/Contig/d' 500kb.gff
+
+python N_content2circos.py --genome /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_SCEB13/0.Repeat/SCEB.fa.preSatMar211447412020.RMoutput/SCEB.fa.masked --gff 500kb.gff > N_500kb.txt
+
+bedtools coverage -b /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_SCEB13/0.Repeat/SCEB.fa.preSatMar211447412020.RMoutput/SCEB.fa.out.gff -a 500kb.gff > repeat_density_500kb.bed
+
+python coverage_bed2circos.py --bed repeat_density_500kb.bed --per_X_bp 500000 > repeat_density_500kb.txt

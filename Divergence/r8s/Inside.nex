@@ -1,0 +1,70 @@
+#NEXUS
+
+Begin trees;
+
+tree reroot_branch = (KillerWhale:0.041400869898992,(LesserMouseDeer:0.09540959197427185956,((Pronghorn:0.03766913121472607179,(Okapi:0.01331013672606111940,Giraffe:0.01205576076776092125):0.01337354835211781653):0.00182604923125733831,(((RoeDeer:0.01669288299533680173,(WhiteTailedDeer:0.00789822595953137106,Reindeer:0.00745481567847922771):0.00640794340935467270):0.00275371012208244521,((MuntiacusReevesi:0.00544539203069435013,(MuntiacusCrinifrons:0.00360208698244088646,MuntiacusMuntjak:0.00356356202578304642):0.00216079182757560658):0.01009625787185514795,(Daviddeer:0.00547194039236164297,WhiteLippedDeer:0.00553105025589364571):0.00618916732020144845):0.00238991848128566279):0.01640974799666108236,((ForestMuskDeer2:0.00162447018726663475,ForestMuskDeer:0.00152334281096897536):0.02781810040686899868,(((LesserKudu:0.00800672014839027418,((Bushbuck:0.00631569547883785529,(Sitatunga:0.00509970052011073788,(MountainNyala:0.00496662610995081497,Bongo:0.00441155820583805092):0.00081315670254771834):0.00080670128284127975):0.00072508565744695591,(GreaterKudu:0.00629721063822820046,CommonEland:0.00548100478162339127):0.00069711796530916303):0.00162830789741463247):0.01382701744255462190,(AfricanBuffalo:0.01222859454349207488,(Cattle:0.00376605753179472215,Yak:0.00374344869115605071):0.00882012072696597080):0.00528313986856761113):0.00488999190001958035,((Suni:0.02454027858511872301,Impala:0.02099163422149136898):0.00221606674104051979,(((Klipspringer:0.02159769065895324192,RoyalAntelope:0.02212240385644657567):0.00162612383924404702,((MaxwellsDuiker:0.01156921669364808884,(HarveysDuiker:0.00873972030435397375,CommonDuiker:0.00875325087232704108):0.00269213200587658207):0.00736760184476223032,((KirksDik:0.01849532742665529680,Steenbok:0.01552390076537931221):0.00174271245278128858,(GazellaPrzewalskyi:0.01664583421689720677,(Oribi:0.01280227038657780550,((ThomsonGazelle:0.00598661873635918020,GyrantGazelle:0.00591239559545575152):0.00596941798265055064,(Gerenuk:0.00893507154512436681,Springbuck:0.00895587441032548622):0.00281510424927677643):0.00281217147662661147):0.00143814295431673599):0.00102209852167982991):0.00746252507614397851):0.00066360604204453687):0.00067335103563985834,((DefassaWaterbuck:0.00575274553098634785,BohorReedbuck:0.00629346498750458540):0.01414541000385228023,((Gemsbok:0.01246128837488814749,(BlueWildebeest:0.00462355412269204943,(Hartebeest:0.00210446252879053835,Topi:0.00433399219801638112):0.00129495067880295721):0.00779892954006394107):0.00300067696208162387,(TibetanAntelope:0.01224677654062344967,((((Ibex:0.00312272685002496506,goat:0.00268322101389121539):0.00268245516382601768,BlueSheep:0.00579583184507896209):0.00158949729730708069,BarbarySheep:0.00799471863315629090):0.00097676170207218601,(Sheep:0.00263763046869066068,Argali:0.00253809704606597440):0.00655444489337209200):0.00299107225312676911):0.00404295014485512617):0.00279799170036408628):0.00059094587579925750):0.00106216969148834853):0.00500743174716874410):0.00413723757937593806):0.00277161383786923669):0.00184577196402733448):0.03359780627773307354):0.041400869898992);
+
+END;
+
+BEGIN r8s;
+
+BLFORMAT lengths=persite nsites=10000 ultrametric=no;
+
+COLLAPSE;
+
+MRCA LESS LesserMouseDeer MuntiacusReevesi BlueWildebeest Argali GreaterKudu;
+MRCA OP Okapi Pronghorn Giraffe;
+MRCA MB MountainNyala Bongo;
+MRCA BAMG Bushbuck Sitatunga MountainNyala GreaterKudu CommonEland;
+MRCA LMG LesserKudu MountainNyala GreaterKudu;
+MRCA ACY AfricanBuffalo Cattle Yak;
+MRCA LBGAC LesserKudu Bushbuck Sitatunga Bongo GreaterKudu Yak;
+MRCA DB DefassaWaterbuck BohorReedbuck;
+MRCA BHT BlueWildebeest Hartebeest Topi;
+MRCA GBHT Gemsbok BlueWildebeest Topi;
+MRCA GBTIA Gemsbok BlueWildebeest Topi TibetanAntelope goat BlueSheep Argali;
+MRCA LBRGA LesserKudu Bushbuck RoyalAntelope GazellaPrzewalskyi Hartebeest BlueSheep Argali;
+MRCA FAGHA ForestMuskDeer2 AfricanBuffalo GazellaPrzewalskyi Hartebeest Argali;
+MRCA RMSBA RoeDeer MountainNyala Springbuck BlueSheep Argali;
+MRCA KMBBA KillerWhale MountainNyala BlueWildebeest BarbarySheep Argali;
+
+
+
+FIXAGE taxon=LESS age=36;
+
+
+constrain taxon=OP min_age=18 max_age=22.5;
+constrain taxon=MB min_age=3.4 max_age=4.5;
+constrain taxon=BAMG min_age=3.4 max_age=4.5;
+constrain taxon=LMG min_age=4.7 max_age=6.7;
+constrain taxon=ACY min_age=7 max_age=11;
+constrain taxon=LBGAC min_age=10.2 max_age=16;
+constrain taxon=DB min_age=5.1 max_age=7;
+constrain taxon=BHT min_age=4.5 max_age=7;
+constrain taxon=GBHT min_age=6.4 max_age=13;
+constrain taxon=GBTIA min_age=8.9 max_age=13;
+constrain taxon=LBRGA min_age=16 max_age=20;
+constrain taxon=FAGHA min_age=23 max_age=28.4;
+constrain taxon=RMSBA min_age=16.6 max_age=28.4;
+constrain taxon=KMBBA min_age=47 max_age=58.8;
+
+set penalty=log smoothing=3;
+divtime method=PL algorithm=TN;
+showage shownamed=yes;
+
+set checkgradient=yes smoothing=3;
+divtime method=pl algorithm=tn;
+showage;
+
+describe plot=phylogram;
+describe plot=chronogram;
+describe plot=tree_description;
+describe plot=chrono_description;
+describe plot=phylo_description;
+describe plot=rato_description;
+showage;
+
+set penalty=add checkgradient=no;
+DIVTIME method=PL fossilconstrained=yes crossv=yes cvstart=0 cvinc=0.50 cvnum=6 algorithm=tn;
+DIVTIME method=PL fossilfixed=yes crossv=yes cvstart=0 cvinc=0.50 cvnum=6 algorithm=tn;
+end;

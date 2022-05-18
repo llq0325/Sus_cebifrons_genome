@@ -1,0 +1,1 @@
+bedtools getfasta -fi /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/Compare_SSC11.1/GCA_000003025.6_Sscrofa11.1_genomic.fna.fa.rehead -bed Telo_pig.bed 

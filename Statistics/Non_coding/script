@@ -1,0 +1,1 @@
+awk '{print $4-$3}' tRNA_withbind |sed 's/-//'|awk '{sum+=$0} END {print "Average = ", sum/NR, "    Sum=",sum}'

@@ -1,0 +1,22 @@
+#maf to chain
+/lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/bin/last-980/bin/maf-convert chain /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/Whole_genome_alignment/Pairwise/MUMmer/SCEB_PIG/SCEB.maf > SCEB_pig.chain
+
+for i in `seq 1 17`
+do
+cut -f1,2,5,7 SCEB.SCEB${i}.50kb.tsv > SCEB.SCEB${i}.50kb.bed
+done
+
+chr=1
+for size in `cat chrsize.txt`;do
+for pos in `seq 0 50000 $size`;do
+end=$((${pos} + 1))
+echo -e "SCEB${chr}\t${pos}\t${end}\t${pos}" >> SCEB${chr}.bed
+done
+chr=$((${chr} + 1))
+done
+
+
+#liftOver
+for i in `seq 1 17`;do
+liftOver SCEB${i}.bed SCEB_SSC.chain SCEB${i}_liftovered.bed SCEB${i}fail.bed
+done

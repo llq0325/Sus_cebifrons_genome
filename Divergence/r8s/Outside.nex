@@ -1,0 +1,56 @@
+#NEXUS
+
+Begin trees;
+
+tree ruminant16sequences = (((Horse:0.05324675746068028431,Dog:0.06191039123831121316):0.00135939070878573695,(Camel:0.05368123858024323458,(Pig:0.05754762463328858685,(KillerWhal:0.03583114163208075964,(LesserMous:0.05748399794914696437,((Pronghorn:0.02306179879101313487,(Giraffe:0.00802396684575669948,Okapi:0.00903358095586603675):0.00826783971101031565):0.00106559405965912161,((MuntiacusC:0.00914767958302746369,Daviddeer:0.00702366806243832995):0.01069090647661379880,(ForestMusk:0.01764185233649339171,((goat:0.00447135431131136501,Sheep:0.00548805503522568384):0.00919157151827698291,Cattle:0.01344947391527242554):0.00251782438294692514):0.00141723701112428618):0.00103637178201015879):0.01777751499247200856):0.01385875347656569632):0.00579784119893838722):0.00262518322747794545):0.01235908675432453689):0.03928735827122160906,Human:0.03928735827122160906);
+
+END;
+
+BEGIN r8s;
+
+BLFORMAT lengths=persite nsites=10000000 ultrametric=no;
+
+COLLAPSE;
+
+
+
+MRCA HO Human Horse Pronghorn Sheep Cattle;
+MRCA HD Horse Dog;
+MRCA CO Camel goat Sheep Cattle;
+MRCA KR KillerWhal Cattle goat Sheep MuntiacusC Pronghorn;
+MRCA LPD LesserMous Cattle goat Sheep ForestMusk;
+MRCA OP Okapi Pronghorn Giraffe;
+MRCA DM Pronghorn Cattle Sheep goat ForestMusk Daviddeer;
+MRCA BM MuntiacusC Cattle ForestMusk goat Sheep;
+
+FIXAGE taxon=HO age=100;
+
+CONSTRAIN taxon=HD min_age=50.3 max_age=62.9;
+constrain taxon=CO min_age=33.9;
+constrain taxon=KR min_age=47 max_age=58.8;
+constrain taxon=LPD min_age=33 max_age=41.3;
+constrain taxon=OP min_age=18 max_age=22.5;
+constrain taxon=DM min_age=17.2 max_age=21.5;
+constrain taxon=BM min_age=18 max_age=22.5;
+
+
+set penalty=log smoothing=3;
+divtime method=PL algorithm=TN;
+showage shownamed=yes;
+
+set checkgradient=yes smoothing=3;
+divtime method=pl algorithm=tn;
+showage;
+
+describe plot=phylogram;
+describe plot=chronogram;
+describe plot=tree_description;
+describe plot=chrono_description;
+describe plot=phylo_description;
+describe plot=rato_description;
+showage;
+
+set penalty=add checkgradient=no;
+DIVTIME method=PL fossilconstrained=yes crossv=yes cvstart=0 cvinc=0.50 cvnum=6 algorithm=tn;
+DIVTIME method=PL fossilfixed=yes crossv=yes cvstart=0 cvinc=0.50 cvnum=6 algorithm=tn;
+end;

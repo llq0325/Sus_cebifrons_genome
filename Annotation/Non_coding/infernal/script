@@ -1,0 +1,9 @@
+grep "microRNA" Rfam.out.SCEB13.tsv > miRNA_output.txt
+grep "Small nucleolar RNA" Rfam.out.SCEB13.tsv > snRNA_output.txt
+grep "ribosomal RNA" Rfam.out.SCEB13.tsv > rRNA_output.txt
+grep "tRNA" Rfam.out.SCEB13.tsv > tRNA_output.txt
+
+perl infernal-tblout2gff.pl --cmscan --fmt2 -E 0.01 tRNA_output.txt > tRNA.filter.txt
+perl infernal-tblout2gff.pl --cmscan --fmt2 -E 0.01 snRNA_output.txt > snRNA.filter.txt
+perl infernal-tblout2gff.pl --cmscan --fmt2 -E 0.01 rRNA_output.txt > rRNA.filter.txt
+perl infernal-tblout2gff.pl --cmscan --fmt2 -E 0.01 miRNA_output.txt > miRNA.filter.txt

@@ -1,0 +1,2 @@
+/lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/Hi-C/Phylo-HMRF/test/test_data/hic_SCEB
+/lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/Hi-C/Phylo-HMRF/test/test_data/hic_SSC

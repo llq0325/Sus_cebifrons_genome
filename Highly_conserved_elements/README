@@ -1,0 +1,6 @@
+#extract 4d sites (example)
+./bin/msa_view /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/Whole_genome_alignment/Pairwise/Ortho_gene/all.maf \
+--in-format MAF --4d --features /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/Whole_genome_alignment/Pairwise/Ortho_gene/human.gff3> 4d.SCEB.7seq
+
+
+

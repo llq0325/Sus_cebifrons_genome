@@ -1,0 +1,7 @@
+######################### BLAST ############################
+formatdb = /opt/blc/genome/biosoft/blast-2.2.23/bin/formatdb
+blastall = /opt/blc/genome/biosoft/blast-2.2.23/bin/blastall
+
+####################### GENEWISE ###########################
+genewise = /opt/blc/genome/bin/genewise
+

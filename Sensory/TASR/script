@@ -1,0 +1,7 @@
+LIST=`cat seq.list`
+
+for i in $LIST;do 
+
+../gerpcol -a -t tree/${i}.tre -f alan/${i}.aln -e human
+
+done

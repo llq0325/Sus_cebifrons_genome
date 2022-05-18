@@ -1,0 +1,1 @@
+cat load_state_test.m | matlab -nodesktop -nosplash

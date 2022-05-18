@@ -1,0 +1,4 @@
+gffread gth.gff.input -T -o gth.gtf
+gffread gth.stop.gff.input -T -o gth.stop.gtf
+stringtie --merge -o merge.gtf gth.gtf gth.stop.gtf
+gffread -E merge.gtf -o- > merge.gff

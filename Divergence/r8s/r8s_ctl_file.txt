@@ -1,0 +1,13 @@
+#NEXUS
+begin trees;
+tree nj_tree = [&R] (((dog:0.03472267729986399,horse:0.032256176848129495):0.0025594468954786304,((pig:0.0016236355654648353,SCEB:0.001246889911781455):0.02425157871117579,cattle:0.03884016654384492):0.007677930806431085):0.005152173724229755,(human:0.028094276386778878,mouse:0.08959194272621061):0.005152173724229755);
+End;
+begin rates;
+blformat nsites=5000 lengths=persite ultrametric=no;
+collapse;
+mrca mandog human dog;
+fixage taxon=mandog age=94;
+divtime method=pl algorithm=tn cvStart=0 cvInc=0.5 cvNum=8 crossv=yes;
+describe plot=chronogram;
+describe plot=tree_description;
+end;

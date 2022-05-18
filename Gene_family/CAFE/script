@@ -1,0 +1,27 @@
+Orthofinder output to mcl output
+sed 's/ ,/\t/g' Orthogroups.tsv > Orthofinder_mcl_output.tsv
+sed -i 's/SCEB/SCEB|SCEB/g' Orthofinder_mcl_output.tsv
+sed -i 's/ENSBTAG/cattle|ENSBTAG/g' Orthofinder_mcl_output.tsv
+sed -i 's/ENSSSCG/pig|ENSSSCG/g' Orthofinder_mcl_output.tsv
+sed -i 's/ENSCAFG/dog|ENSCAFG/g' Orthofinder_mcl_output.tsv
+sed -i 's/ENSG/human|ENSG/g' Orthofinder_mcl_output.tsv
+sed -i 's/ENSECAG/horse|ENSECAG/g' Orthofinder_mcl_output.tsv
+sed -i 's/ENSMUSG/mouse|ENSMUSG/g' Orthofinder_mcl_output.tsv
+sed -i '1d' Orthofinder_mcl_output.tsv
+sed -i -e 's/^OG[0-9]*\t//'  Orthofinder_mcl_output.tsv
+
+python SCRIPT/scripts/cafetutorial_mcl2rawcafe.py -i Orthofinder_mcl_output.tsv -o unfiltered_cafe_input.txt -sp "SCEB cattle pig dog human horse mouse"
+python SCRIPT/scripts/cafetutorial_clade_and_size_filter.py -i unfiltered_cafe_input.txt -o filtered_cafe_input.txt -s
+
+
+
+mkdir filterp; cd filterp;cat ../reports/report_run1.cafe |awk -F '\t' '$3<0.05'>report_run1.p.cafe ;cat ../reports/report_run2.cafe |awk -F '\t' '$3<0.05' >report_run2.p.cafe
+
+grep -v "Family ID" unfiltered_cafe_input.txt | cut -f2 > FAM_ID.txt
+paste FAM_ID.txt Orthofinder_mcl_output.tsv > FAM_ID_Orthofinder_mcl_output.tsv
+sed -i 's/, /\t/g' FAM_ID_Orthofinder_mcl_output.tsv
+
+grep \> /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Functional_Annotation/EVM/final_assembly_annotation/sus_cebifrons_protein.fa > SCEB.anno.txt
+sed -i 's/>//g' SCEB.anno.txt
+sed -i 's/ gene=/\t/g' SCEB.anno.txt
+sed -i -e 's/\(.*\t.*\)_.*/\1/g' SCEB.anno.txt

@@ -1,0 +1,48 @@
+#NEXUS
+
+Begin trees;
+
+tree nj_tree = (((dog:0.03472267729986399,horse:0.032256176848129495):0.0025594468954786304,((pig:0.0016236355654648353,SCEB:0.001246889911781455):0.02425157871117579,cattle:0.03884016654384492):0.007677930806431085):0.005152173724229755,(human:0.028094276386778878,mouse:0.08959194272621061):0.005152173724229755);
+
+END;
+
+BEGIN r8s;
+
+BLFORMAT lengths=persite nsites=5000 ultrametric=no;
+
+COLLAPSE;
+
+
+MRCA HO human horse pig cattle;
+MRCA HD horse dog;
+MRCA CS cattle pig SCEB;
+MRCA SS pig SCEB;
+
+FIXAGE taxon=HO age=94;
+
+constrain taxon=HD min_age=50.3 max_age=62.9;
+constrain taxon=CO min_age=33.9;
+constrain taxon=CS min_age=58 max_age=62;
+constrain taxon=SS min_age=2.5 max_age=4.5;
+
+
+set penalty=log smoothing=3;
+divtime method=PL algorithm=TN;
+showage shownamed=yes;
+
+set checkgradient=yes smoothing=3;
+divtime method=pl algorithm=tn;
+showage;
+
+describe plot=phylogram;
+describe plot=chronogram;
+describe plot=tree_description;
+describe plot=chrono_description;
+describe plot=phylo_description;
+describe plot=rato_description;
+showage;
+
+set penalty=add checkgradient=no;
+DIVTIME method=PL fossilconstrained=yes crossv=yes cvstart=0 cvinc=0.50 cvnum=6 algorithm=tn;
+DIVTIME method=PL fossilfixed=yes crossv=yes cvstart=0 cvinc=0.50 cvnum=6 algorithm=tn;
+end;

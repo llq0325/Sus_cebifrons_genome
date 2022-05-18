@@ -1,0 +1,158 @@
+#####################
+####software path
+#####################
+blastall = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/blastall
+formatdb = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/bin/blast-2.2.26/bin/formatdb
+genewise = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/genewise
+genBlastA = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/genblasta_v1.0.4_linux_x86_64
+solar = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/solar
+muscle = /cm/shared/apps/muscle/3.8.31/bin/muscle
+
+#####################
+#####common_bin
+#####################
+fishInWinter.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/fishInWinter.pl
+hcluster.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/hcluster.pl
+cds2aa.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/cds2aa.pl
+getGene.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/getGene.pl
+multi-process.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/multi-process.pl
+qsub_sge.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/qsub-sge.pl
+fastaDeal.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/fastaDeal.pl
+getTE.pl = /lustre/nobackup/WUR/ABGC/liu194/analysis/Vasayan_Warty_pig_10X/annotation/Hybrid_Approach_RaGOO/2.homology/augustus/homolog/common_bin/getTE.pl
+
+#####################
+#####database path
+#####################
+#nr = /its1/pub/annotdb/nr/201605
+#nt = /its1/pub/annotdb/nt/201605
+#nt = /ifs4/BC_PUB/biosoft/db/Pub/nt/20160219
+#nr = /ifs4/BC_PUB/biosoft/db/Pub/nr/RNA/20160219
+#go = /ifs4/BC_PUB/biosoft/db/Pub/go/RNA/20141201
+#
+#RNAdenovo_anno = /ifs4/BC_PUB/biosoft/pipeline/RNA/RNA_RNAdenovo/RNA_RNAdenovo_2015a/Annotation
+#swissprot = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/uniprot/release-2015_12/swissport/uniprot_sprot.Eukaryota.fasta.simple
+#trembl = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/uniprot/release-2015_12/trembl/uniprot_trembl.Eukaryota.fasta.simple
+#kegg_all=/ifs4/BC_PUB/biosoft/database/PUB/Pub/kegg/RNA/76/kegg_all_clean.fa
+#kegg_plant = /ifs4/BC_PUB/biosoft/database/PUB/Pub/kegg/RNA/76/plant.fa
+#kegg_animal= /ifs4/BC_PUB/biosoft/database/PUB/Pub/kegg/RNA/76/animal.fa
+#ko = /ifs4/BC_PUB/biosoft/database/PUB/Pub/kegg/RNA/76/ko
+#map = /ifs4/BC_PUB/biosoft/database/PUB/Pub/kegg/RNA/76/map
+#cog = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/cog/cog_clean.fa
+#
+#tedna = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/RepBase/RepBase21.01/RepeatMaskerLib.embl.lib
+#tepep = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/RepBase/RepBase21.01/RepeatPeps.lib
+#
+#################################
+#### auto_gene_annotation     ###
+#################################
+#blat = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/blat35/x86_64-redhat-linux-gnu/blat
+#pasa = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/PASApipeline-2.0.2/bin/pasa
+#augustus = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/augustus-3.2.1/bin/augustus
+#augustus = /opt/bio/augustus-3.2.3/bin/augustus
+#augustus_config = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/augustus-3.2.1/config/
+#augustus_config = /opt/bio/augustus-3.2.3/config
+#genscan = /opt/blc/genome/biosoft/genscan/genscan
+#genscan_para = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/denovo-predict/dat/genscan_para/Arabidopsis.smat
+#fgenesh = /opt/blc/genome/biosoft/fgenesh-unknown/usr/local/DeCIFR/farm/bin/fgenesh
+#fgenesh_para = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/denovo-predict/dat/fgenesh_para/Monocot
+#glimmer_bin = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/GlimmerHMM-3.0.4/bin
+#GlimmerHMM = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/GlimmerHMM-3.0.4/bin/glimmerhmm_linux_x86_64
+#glimmerHMM_para = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/GlimmerHMM-3.0.4/trained_dir/arabidopsis/
+#snap = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/snap/snap
+#snap_para = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/snap/HMM/A.thaliana.hmm
+#geneid = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/geneid_v1.4.4/bin/geneid
+#geneid_para = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/geneid_v1.4.4/param/human.061209.param
+#
+#remask_genome = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/remask_genome/remask.pl
+#protein_map_genome = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/protein-map-genome/bin/protein_map_genome_solar.pl
+#protein_map_genome_genBlastA = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/protein-map-genome/bin/protein_map_genome_genBlastA.pl
+#denovo_gene_prediction = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/denovo-predict/bin/denovo-predict.pl
+#GlimmerHMM_prediction = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/denovo-predict/GlimmerHMM/glimmerHmm_prediction_2016a.pl
+#snap_prediction = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/denovo-predict/SNAP_2.0/SNAP_prediction.pl
+#geneid_prediction = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/denovo-predict/GeneID/geneid_prediction.pl
+#est_map_genome = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/cDNA-EST-map-genome/bin/est_map_genome.pl
+#cDNA_map_genome = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/cDNA-EST-map-genome/bin/cDNA-map-genome.pl
+#glean_program = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/glean-gene/new_glean/run.Glean.pl
+#parameter_yaml = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/glean-gene/new_glean/parameter.yaml
+#check_parameter_yaml = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/glean-gene/new_glean/check.parameter.yaml.pl
+#stat_gene = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/Statistics/geneset_statistic.pl
+#
+############################
+######## RNA-Seq ###########
+############################
+#samtools            = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/samtools-1.3/bin/samtools
+#cufflinks           = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/cufflinks-2.2.1.Linux_x86_64/cufflinks
+#stringtie            = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/stringtie/stringtie-1.2.2/stringtie
+##tophat             = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/Annotation_v2.0/software/tophat-2.0.13.Linux_x86_64/tophat 
+#hisat               = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/hisat/hisat2-2.0.1-beta
+#tophat              = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/tophat-2.1.0.Linux_x86_64/tophat
+#bowtie              = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/gene/bowtie2-2.2.6
+#auto_CCG	    = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/05.RNAseq_annlysis/bin/auto_CCG.pl
+#training_markov5    = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/05.RNAseq_annlysis/bin/training_markov5.pl
+#perfect_gene	    = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/05.RNAseq_annlysis/perfect_gene/perfect_gene.pl
+#
+#############################
+#### auto_repeat_finding ####
+#############################
+#ltr_path = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/LTR_FINDER/LTR_FINDER.x86_64-1.0.6
+#pals = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/piler/pals/pals
+#piler = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/piler/piler/piler
+#piler_path = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/piler
+#trf = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/trf4.07/trf
+#repeatmasker = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/RepeatMasker-open-4-0-6/RepeatMasker/RepeatMasker
+#proteinmask = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/RepeatMasker-open-4-0-6/RepeatMasker/RepeatProteinMask
+#repeatscout_path = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/RepeatScout-1.0.5
+#recon = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/RepeatModeler/RECON-1.08/bin/
+#repeatmodeler_path = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/RepeatModeler/RepeatModeler-open-1-0-8
+#repeatclassifer = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/repeat/RepeatModeler/RepeatModeler-open-1-0-8/RepeatClassifier
+#denovo_program = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/denovo_predict/bin/denovo_repeat_find.pl
+#known_program = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/find_repeat/bin/find_repeat.pl
+#filter_program = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/build_lib/build_library.no_pwd.pl
+#stat_TE2_path = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/repeat_statistics/stat_TE2.pl
+#stat_program = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/Auto_pipline/auto_repeat/stat.pl
+#change_ID = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/denovo_predict/bin/change_ID.pl
+#svg_path = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/01.repeat_finding/repeat_statistics/distribution_TE_divergence.pl
+#png_path = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/common_bin/svg_kit/svg2xxx.pl
+#
+#################################
+#### auto_function_annotation ###
+#################################
+#auto_blast = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin
+#blast_parser = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/blast_parser.pl
+#blast_database = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/blast_database.pl
+#kegg_parser = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/kegg_parser.pl
+#run_iprscan = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/run_iprscan51-55.pl
+#iprscan_setup = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/iprscan/interpro55/interproscan-5.16-55.0/setup.sh
+#iprscan_parser = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/iprscan_parser51-55.pl
+#iprscan_parser_xls = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/iprscan_parser_xls.pl
+#iprscan = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/iprscan/interpro55/interproscan-5.16-55.0/interproscan.sh
+#ipr2go = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/database/iprscan/interpro55/interproscan-5.16-55.0/data/freemarker/entry_to_go.psv    
+#get_gene_function_number = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/Auto_pipline/auto_fun_ann/get_gene_function_number.pl
+#stat_fun_ann = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/all_function_stat.pl
+#venny = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/venny.pl
+#addDesc = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/03.gene_function/bin/addDesc.pl
+#
+#####################
+#####auto_ncRNA
+####################
+##tRNAscan = /opt/blc/genome/biosoft/tRNAscan-SE-1.3.1/bin/tRNAscan-SE
+#tRNAscan = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/tRNAscan-SE-1.3.1/bin/tRNAscan-SE
+#cmsearch = /ifs4/BC_PUB/biosoft/pipeline/DNA/DNA_annotation/software/bin/infernal-1.1.1/bin/cmsearch
+#
+#change_to_60 = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/bin/change_to_60.pl
+#find-RNA_path = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/bin/find-RNA.pl
+#scan_Rfam_path = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/bin/scan_Rfam_v12.pl
+#stat_program_ncRNA = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/Auto_pipline/auto_ncRNA/stat_ncRNA.pl
+#Rfam = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/dat/Rfam_12.0
+#stat_ncRNA_path = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/RNA_statistic/statistic_ncRNA.pl
+#plant_ref_rRNA = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/dat/ref-rRNA/plant-rRNA/plant_rRNA.fa
+#yeast_ref_rRNA = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/dat/ref-rRNA/yeast_rRNA.fa
+#vertebrate_ref_rRNA = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/dat/ref-rRNA/vertebrate/Human_rRNA.fa
+#invertebrate_ref_rRNA = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/04.ncRNA-finding/rRNA-tRNA-Rfam/dat/ref-rRNA/invertebrate/invertebrate_rRNA.fa
+#
+#####################
+#####auto_glean_process
+####################
+#auto_glean_process = /its1/GB_BT2/tanghao/Project/annotation_pipeline_V2/homolog/02.gene_finding/glean_process/bin/auto_glean_process.pl
+#soap = /ifs4/BC_PUB/biosoft/pipe/bc_ba/Assembly/Soap/soap2.21release
+#soap_coverage = /ifs4/BC_PUB/biosoft/pipe/bc_ba/Assembly/Soap/soap.coverage2.27
